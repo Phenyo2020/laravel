@@ -1,0 +1,45 @@
+/bootstrap/compiled.php
+/vendor
+composer.phar
+composer.lock
+.env.*.php
+.env.php
+.DS_Store
+Thumbs.db
+/public/assets/vendor
+
+# IntelliJ project files
+.idea/
+*.iml
+
+# propel
+/app/config/propel/runtime-conf.xml
+/app/config/propel/buildtime-conf.xml
+/app/config/propel/config.php
+/app/Zidisha/*/Map
+/app/Zidisha/*/Base
+
+/bootstrap/env.php
+_ide_helper.php
+
+#Ignore Database Credentials
+/app/config/local/database.php
+
+/node_modules
+
+#Ignore the migrations folder
+/app/database/migrations
+
+#Ignore credential
+/app/config/local
+
+/public/images
+/public/uploads
+
+
+tests/_output/*
+tests/unit/UnitTester.php
+tests/acceptance/AcceptanceTester.php
+tests/functional/FunctionalTester.php
+
+/public/packages

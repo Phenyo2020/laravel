@@ -1,0 +1,55 @@
+{
+	"name": "laravel/laravel",
+	"description": "The Laravel Framework.",
+	"keywords": ["framework", "laravel"],
+	"license": "MIT",
+	"require": {
+		"laravel/framework": "4.2.*",
+        "propel/propel": "2.0.0-alpha3",
+        "facebook/php-sdk": "v3.2.3",
+        "ruflin/Elastica": "dev-master",
+        "stripe/stripe-php": "1.*",
+        "intervention/image": "2.0.4",
+        "supremenewmedia/finance": "0.1.2",
+        "geoip2/geoip2": "0.6.*",
+        "phpexcel/phpexcel": "1.7.*",
+        "paypal/merchant-sdk-php":"v3.6.106",
+        "siftscience/sift-php" : "1.*",
+        "google/apiclient": "1.0.*@beta"
+    },
+	"autoload": {
+		"classmap": [
+			"app/commands",
+			"app/controllers",
+			"app/helpers",
+			"app/database/seeds"
+		],
+        "psr-4": {
+            "Zidisha\\": "app/Zidisha"
+        }
+	},
+	"scripts": {
+		"post-install-cmd": [
+			"php artisan clear-compiled",
+			"php artisan optimize"
+		],
+		"post-update-cmd": [
+			"php artisan clear-compiled",
+			"php artisan optimize",
+            "php artisan debugbar:publish"
+		],
+		"post-create-project-cmd": [
+			"php artisan key:generate"
+		]
+	},
+	"config": {
+		"preferred-install": "dist"
+	},
+	"minimum-stability": "stable",
+	"require-dev": {
+		"fzaninotto/faker": "1.3",
+        "codeception/codeception": "2.0.*@dev",
+        "codeception/verify": "*",
+        "barryvdh/laravel-debugbar": "1.*"
+	}
+}
